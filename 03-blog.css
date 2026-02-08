@@ -1,0 +1,41 @@
+/* Font dasar */
+body {
+  font-family: "Merriweather", serif;
+  margin: 20px;
+}
+
+/* ID selector */
+#judul-blog {
+  text-align: center;
+  font-size: 32px;
+}
+
+/* Class selector */
+.tagline {
+  text-align: center;
+  font-style: italic;
+}
+
+.judul-artikel {
+  color: #2c3e50;
+  margin-top: 30px;
+}
+
+.highlight {
+  background-color: #f9ebea;
+  padding: 10px;
+  border-left: 4px solid #e74c3c;
+}
+
+/* Element + class */
+.daftar-topik li {
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}

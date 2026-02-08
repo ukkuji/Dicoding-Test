@@ -1,0 +1,95 @@
+console.log("=================================Soal 1================================================");
+
+let data = [29, 5, 13, 40, 7, 33, 18, 21, 9, 2];
+function linearSearch(arr,target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i; // index ditemukan
+    }
+  }
+  return -1; // kalau data tidak ditemukan
+}
+console.log(linearSearch(data, 2));   // pencarian nilai pertama
+console.log(linearSearch(data, 99));  // pencarian nilai kedua
+console.log("==================================Soal 2===============================================");
+
+let data2 = [3, 7, 12, 18, 22, 27, 31, 36, 40, 45];
+function binarySearch(arr,target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right)/2); //cari tengah
+
+    if (arr[mid] === target) {
+      return true; // nilai ditemukan
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return false; // kalau nilai tidak ditemukan
+}
+console.log(binarySearch(data, 7));   // panggil fungsi hasil true
+console.log(binarySearch(data, 21));  // panggil fungsi hasil false
+console.log("==================================Soal 3===============================================");
+
+
+
+function bubbleSort(arr) {
+  let result = [...arr]; // salin array agar data asli tidak berubah
+  for (let i = 0; i < result.length - 1; i++) {
+    for (let j = 0; j < result.length-i-1; j++) {
+      if (result[j] > result[j + 1]) {
+        let temp = result[j];
+        result[j] = result[j + 1];
+        result[j + 1] = temp;
+      }
+    }
+  }
+  return result;
+}
+console.log(bubbleSort([7, 2, 9, 4, 1])); //panggil fngsi bubblesort
+
+
+
+function selectionSort(arr) {
+  let result = [...arr];
+
+  for (let i = 0; i < result.length - 1; i++) {
+    let minIndex = i;
+
+    for (let j = i + 1; j < result.length; j++) {
+      if (result[j] < result[minIndex]) {
+        minIndex = j;
+      }
+    }
+
+    if (minIndex !== i) {
+      let temp = result[i];
+      result[i] = result[minIndex];
+      result[minIndex] = temp;
+    }
+  }
+  return result;
+}
+console.log(selectionSort([10, 4, 6, 2, 8])); //panggil fungsi selectio sort
+
+function insertionSort(arr) {
+  let result = [...arr];
+
+  for (let i = 1; i< result.length; i++) {
+    let key = result[i];
+    let j = i - 1;
+    while (j >= 0 && result[j] > key) {
+      result[j + 1] = result[j];
+      j--;
+    }
+    result[j + 1] = key;
+  }
+  return result;
+}
+console.log(insertionSort([5, 3, 8, 6, 2])); //panggil fungsi insertion sort
+

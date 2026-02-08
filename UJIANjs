@@ -1,0 +1,36 @@
+function cekGanjilGenap(n){
+    if (!Number.isInteger(n)){
+        return "anda memasukkan bilangan yang salah"
+    }
+    if (n %2 ==0){
+        return "genap";
+    }
+    if (n %2 !=0){
+        return "genap";
+    }
+}
+console.log(cekGanjilGenap("10"));
+
+
+// typeof str !== "string"
+
+function reverseString(word){
+    if (typeof word !=="string") {
+        return "input harus string";}
+    return word.split('').reverse().join('');
+}
+function reverseKalimat(str) {
+  return str.split(' ').reverse().join(' ');
+} 
+console.log(reverseString("saya pergi ke pasar"));
+console.log(reverseKalimat("saya pergi ke pasar"));
+
+
+
+
+
+const buah = ["apel", "jeruk", "mangga", "pisang"];
+console.log(buah);
+console.log(buah.length);
+console.log(buah.toString());
+

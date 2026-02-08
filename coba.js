@@ -5,18 +5,16 @@ class Hewan {
     this.gender = gender;
     this.nama = nama;
   }
-
   makeSound() {
     return "Hewan mengeluarkan suara";
   }
 }
 class Kucing extends Hewan {
   constructor(nama, breed, usia, gender) {
-    super(breed, usia, gender);
+    super(nama, breed, usia, gender);
     this.nama = nama;
     this.jumlahKaki = 4;
   }
-
   makeSound() {
     return "Meong";
   }
@@ -27,7 +25,6 @@ class Sapi extends Hewan {
     this.nama = nama;
     this.jumlahKaki = 4;
   }
-
   makeSound() {
     return "Moooo";
   }
@@ -38,7 +35,6 @@ class Anjing extends Hewan {
     this.nama = nama;
     this.jumlahKaki = 4;
   }
-
   makeSound() {
     return "Guk Guk";
   }

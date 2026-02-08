@@ -7,7 +7,6 @@ const arrayObjectSiswa = [
     { id: 1645, nama: "Joko", jurusan: "Teknik Informatika", nilaiNilai: [80, 60, 90] }, 
     { id: 972, nama: "Sari", jurusan: "Sistem Informasi", nilaiNilai: [95, 100, 100] }, 
 ];
-
 const processStudentData = (students, minAverage) => {
   return students
     // 1. map: hitung rata-rata & ubah nama jadi kapital
@@ -16,22 +15,17 @@ const processStudentData = (students, minAverage) => {
         (sum, nilai) => sum + nilai,
         0
       );
-
       const rataRataNilai = totalNilai / student.nilaiNilai.length;
-
       return {
         ...student,
         nama: student.nama.toUpperCase(),
         rataRataNilai
       };
     })
-
     // 2. filter: rata-rata > minAverage
     .filter(student => student.rataRataNilai > minAverage)
-
     // 3. sort: descending berdasarkan id
     .sort((a, b) => b.id - a.id);
 };
-
 const result = processStudentData(arrayObjectSiswa, 85);
 console.log(result);

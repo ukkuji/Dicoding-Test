@@ -1,0 +1,23 @@
+const showSummary = (rawData) => {
+    // 1. Kelompokkan data berdasarkan kelas
+    const groupedByClass = rawData.reduce((acc, curr) => {
+        if (!acc[curr.kelas]) {
+            acc[curr.kelas] = [];
+        }
+        acc[curr.kelas].push(curr.nilai);
+        return acc;
+    }, {});
+
+    // 2. Tampilkan summary per kelas
+    let index = 1;
+    for (const kelas in groupedByClass) {
+        const jumlahSiswa = groupedByClass[kelas].length;
+        const rataRata = average(groupedByClass[kelas]);
+        const rataRataRounded = roundTwoDecimal(rataRata);
+
+        console.log(
+            `${index}. Kelas = ${kelas} | Jumlah Siswa = ${jumlahSiswa} | Nilai Rata-rata = ${rataRataRounded}`
+        );
+        index++;
+    }
+};

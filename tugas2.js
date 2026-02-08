@@ -6,9 +6,7 @@ function pisahBilangan(...input) {
   if (batasAkhir < 10) {
     return 
         console.log("error");
-        
   }
-
   let arrayBilanganGenap = [];
   let arrayBilanganGanjil = [];
 
@@ -19,7 +17,6 @@ function pisahBilangan(...input) {
       arrayBilanganGanjil.push(i);
     }
   }
-
   return {
     arrayBilanganGenap,
     arrayBilanganGanjil

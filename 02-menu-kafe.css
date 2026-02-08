@@ -1,0 +1,33 @@
+/* 3. Element selector */
+h2 {
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+li {
+  font-size: 16px;
+  color: #555;
+}
+
+/* 4. ID selector */
+#judul-utama {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 28px;
+}
+
+/* 5. Class selector */
+.makanan {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.minuman {
+  list-style-type: square;
+  list-style-position: inside;
+}
+
+/* 6. Tambahan text-align pada h2 */
+h2 {
+  text-align: left;
+}

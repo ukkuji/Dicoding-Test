@@ -10,15 +10,12 @@ function hitungNilaiSemester(data = []) {
       rataRataNilaiSemesterGanjil: 0
     };
   }
-
   let totalGenap = 0;
   let totalGanjil = 0;
   let countGenap = 0;
   let countGanjil = 0;
-
   data.forEach((nilai, index) => {
     const semester = index + 1; // semester dimulai dari 1
-
     if (semester % 2 === 0) {
       totalGenap += nilai;
       countGenap++;
@@ -27,7 +24,6 @@ function hitungNilaiSemester(data = []) {
       countGanjil++;
     }
   });
-
   return {
     totalNilaiSemesterGenap: totalGenap,
     totalNilaiSemesterGanjil: totalGanjil,
@@ -35,6 +31,5 @@ function hitungNilaiSemester(data = []) {
     rataRataNilaiSemesterGanjil: countGanjil === 0 ? 0 : totalGanjil / countGanjil
   };
 }
-
 console.log(hitungNilaiSemester(nilaiSemester));
 console.log(hitungNilaiSemester()); // array kosong

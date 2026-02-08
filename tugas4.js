@@ -10,22 +10,17 @@ const people = [
   { name: 'Ivan', age: 30, nationality: 'Indonesia' },
   { name: 'Abdullah Judy', age: 60, nationality: 'Malaysia' }
 ];
-
 const _ = require('lodash');
-
 const filterByMaxAge = (data, maxAge) => {
   return data.filter(person => person.age < maxAge);
 };
-
 const groupByNationality = (data) => {
   return _.groupBy(data, 'nationality');
 };
-
 const processPeopleData = (data, maxAge) => {
   const filteredData = filterByMaxAge(data, maxAge);
   return groupByNationality(filteredData);
 };
-
 const result = processPeopleData(people, 35);
 console.log(result);
 
